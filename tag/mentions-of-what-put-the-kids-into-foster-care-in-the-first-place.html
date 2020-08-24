@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/byleth.html">BYLETH</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-ships.html">POSSIBLE SHIPS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-what-put-the-kids-into-foster-care-in-the-first-place.html">MENTIONS OF WHAT PUT THE KIDS INTO FOSTER CARE IN THE FIRST PLACE</a>
+      </div>
       <br/>
       <p>A modern AU where Blyeth is a foster parent. It follows her neighbors (Dimitri, Edelgard, and Claude in particular) as they watch her try to wrangle the kids in and help her in the process. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

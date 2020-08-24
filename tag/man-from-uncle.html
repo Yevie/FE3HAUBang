@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/man-from-uncle.html">MAN FROM U.N.C.L.E.</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/spies.html">SPIES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -95,12 +97,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/canon-typical-violence.html">CANON TYPICAL VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/unhealthy-relationships.html">UNHEALTHY RELATIONSHIPS</a>
+      </div>
       <br/>
       <p>Dimitri and Felix are spies on opposite sides of a war; Sylvain is the unfortunate civilian who's been thrown into their mission with them. But there's a lot more to Dimitri and Felix's tumultuous relationship than meets the eye, and Sylvain is determined to get to the bottom of it before their recklessness wrecks them all.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

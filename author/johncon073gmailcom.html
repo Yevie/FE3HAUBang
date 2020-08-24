@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/detective.html">DETECTIVE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -95,12 +97,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gen.html">GEN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-death.html">MENTIONS OF DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>Three ordinary people: Ignatz, Leonie and Raphael all signed up at private detective office, Byleth Eisner. Seeing that the three were worthy for the position, she offered them a test by solving a murder case of a police officer.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

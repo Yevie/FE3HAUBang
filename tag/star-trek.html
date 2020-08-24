@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/star-trek.html">STAR TREK</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/space-opera.html">SPACE OPERA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -92,12 +94,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-golden-deer.html">THE GOLDEN DEER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-claudelorenz.html">POSSIBLE CLAUDE/LORENZ</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>Claude von Riegan, Starfleet officer and captain of the starship "Derdriu", leads his crew on a mission to recover a relic sacred to the Nabatean people. What he doesn't expect is to be confronted by an Agarthan dreadnought or the rogue "Adrestia" in the Gronder star cluster. He's made a name for himself as a brilliant strategist, but he'll need both wits and luck to get the "Derdriu" to safety.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

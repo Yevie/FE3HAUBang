@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/theater.html">THEATER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/time-loop.html">TIME LOOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/hubert.html">HUBERT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ferdinandhubert.html">FERDINAND/HUBERT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
+      </div>
       <br/>
       <p>Its opening night again - Ferdinand has lived it dozens of times now, though he hardly remembers it. All that’s truly there is deja vu and an impending sense of doom. Each time Ferdinand has chosen his duty over himself - will he choose himself this time?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

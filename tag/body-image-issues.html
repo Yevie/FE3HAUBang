@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cooking-class.html">COOKING CLASS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -103,12 +105,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/insecurity.html">INSECURITY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/body-image-issues.html">BODY IMAGE ISSUES</a>
+      </div>
       <br/>
       <p>Ashe is teaching a cooking class, and has to not focus on his student Byleth, who takes his instructions more seriously than anyone else. He's the youngest instructor the school has had, and he can't afford a scandal. Right? Well, as they're about to learn, if you can't handle the heat, best to get out of the kitchen. (Too many cooks in the kitchen can lead to a lot of complications) </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

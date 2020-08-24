@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/medieval.html">MEDIEVAL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/witches.html">WITCHES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -97,12 +99,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/catherineshamir.html">CATHERINE/SHAMIR</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-asheingrid.html">POSSIBLE MINOR ASHE/INGRID</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-deduedimitri.html">POSSIBLE MINOR DEDUE/DIMITRI</a>
+      </div>
       <br/>
       <p>Annette is a new member to the coven, but has more than proven her skill with magic; Mercedes is a longtime member and takes Annette under her wing. One day, the Necromancer causes trouble in the local area and threatens the coven’s safety. Annette and Mercedes must help defend their coven, and defeat the Necromancer once and for all.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

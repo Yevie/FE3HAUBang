@@ -85,18 +85,37 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/werewolves.html">WEREWOLVES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dedue.html">DEDUE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-deduedimitri.html">POSSIBLE DEDUE/DIMITRI</a>
+      </div>
       <br/>
       <p>werewolves are a known part of the population, but Dimitri in particular has difficult transformations -- as a wolf, he becomes aggressive, destructive to anything within reach. Dedue takes one look at his enclosure (an empty concrete basement) and goes WELL THERE'S YOUR PROBLEM. YOU NEED ENRICHMENT. lets get you some squeaky toys and six pounds of raw hamburger and see how you do</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

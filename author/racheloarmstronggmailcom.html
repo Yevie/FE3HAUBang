@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/superhero.html">SUPERHERO</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -94,12 +96,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gen.html">GEN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
+      </div>
       <br/>
       <p>Dimitri, once a pinnacle of justice, struggles to accept the betrayal of Edelgard five years later. A new league has formed between the Blue Lions and Golden Deer Superhero Task Forces. Will Dimitri succumb to the ghosts of his past, or will he be able to move on thanks to the guidance of a mentor he long believed was dead?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/medieval.html">MEDIEVAL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/witches.html">WITCHES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -97,6 +99,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/catherineshamir.html">CATHERINE/SHAMIR</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-asheingrid.html">POSSIBLE MINOR ASHE/INGRID</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-deduedimitri.html">POSSIBLE MINOR DEDUE/DIMITRI</a>
+      </div>
       <br/>
       <p>Annette is a new member to the coven, but has more than proven her skill with magic; Mercedes is a longtime member and takes Annette under her wing. One day, the Necromancer causes trouble in the local area and threatens the coven’s safety. Annette and Mercedes must help defend their coven, and defeat the Necromancer once and for all.</p>
   </div>
@@ -105,6 +108,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/struggling-artists.html">STRUGGLING ARTISTS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -121,12 +126,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/performance-anxiety.html">PERFORMANCE ANXIETY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussion-of-past-life-endangering-events.html">DISCUSSION OF PAST LIFE-ENDANGERING EVENTS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/regret-of-past-sexual-history.html">REGRET OF PAST SEXUAL HISTORY</a>
+      </div>
       <br/>
       <p>After barely finishing his undergrad studying Cello performance, Felix is stuck in every aspect of his life: his career is going nowhere, he can't stand talking to his family, and he has maybe two friends. Crashing at Ingrid's apartment was all he had, until she suddenly decided to let world-traveling, friend-abandoning, breakout New York Times author of the year Sylvain Gautier crash with them, too. To make matters worse, she lied to her father and said Sylvain and Felix were dating so he wouldn't kick them out, which means that, now, Felix can't run away from his art, friends, family, Sylvain, or himself.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

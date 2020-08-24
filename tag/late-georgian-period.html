@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/late-georgian-period.html">LATE GEORGIAN PERIOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/historical.html">HISTORICAL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/fantasticreincarnation-elements.html">FANTASTIC/REINCARNATION ELEMENTS</a>
@@ -98,6 +100,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/canon-typical-violence.html">CANON TYPICAL VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/alcohol-use.html">ALCOHOL USE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
+      </div>
       <br/>
       <p>Legend tells the story of the Siege of the Silver Maiden who raised the Lion's Banner and heralded the return of the king. 700 years later, Ferdinand von Aegir discovers a mysterious treasure horde while out riding.</p>
 <p>A Jane Austen-esque historical fantasy. </p>
@@ -105,6 +108,22 @@
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/les-miserables.html">LES MISERABLES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ashe.html">ASHE</a>
@@ -101,12 +103,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-hildaleonie.html">MINOR HILDA/LEONIE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/character-death.html">CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>After being released from prison for stealing a loaf of bread, Ashe Duran finds life as an ex-convict difficult; however, following the generous act of Flayn, a holy woman, he sets out to become an honorable man and breaks parole. Five years later and under a different name, he has made a living as a restaurateur alongside his trusted friend, Cyril, all while political tensions rise and his former parole officer Caspar rediscovers his trail. A Les Miserables inspired AU.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

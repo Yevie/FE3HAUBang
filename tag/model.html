@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/model.html">MODEL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -95,12 +97,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cats.html">CATS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/casparlinhardt.html">CASPAR/LINHARDT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/non-malicious-misgendering.html">NON-MALICIOUS MISGENDERING</a>
+      </div>
       <br/>
       <p>Caspar is a men's fitness model who becomes pretty popular after starring in a few, extremely masculine commercials for fast food and cologne. Linhardt is his flabby and lanky best friend who spends all his time in bed, even when doing his job as a programmer, but he's also been head-over-heels in love with Caspar since he learned what love is. One day, a paparazzo catches them on an outing and mistakes Linhardt for Caspar's girlfriend and all hell breaks loose.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

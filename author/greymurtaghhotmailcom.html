@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/alternate-crimson-flower.html">ALTERNATE CRIMSON FLOWER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cyril.html">CYRIL</a>
@@ -97,12 +99,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/fight-scenes.html">FIGHT SCENES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-abuse.html">PAST ABUSE</a>
+      </div>
       <br/>
       <p>Cyril realises he is exploited by Rhea and sides with Edelgard to take her down. He recounts his past and the trauma he has endured, and along the way recruits Lysithea to Edelgard's cause. Climaxes with Cyril being the one to bring Rhea down in the end.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/new-york.html">NEW YORK</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -98,6 +100,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/xenophobia.html">XENOPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/queerphobia.html">QUEERPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-character-death.html">MINOR CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>There’s no place Claude von Riegan would rather be during election year than in the city of New York. This immigration lawyer has had enough with establishment politics, and in an act of spontaneity, he decides to run for office as a progressive Democrat. Claude recruits the help of critically-acclaimed campaign manager Dimitri Alexandre Blaiddyd to go up against some of the most powerful Democrats in Congress: the Gloucester family. Individuals from seemingly opposite worlds are brought together in what will be the most contentious election in New York’s history.</p>
   </div>
@@ -106,6 +109,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/his-dark-materials-fusion.html">HIS DARK MATERIALS FUSION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/daemon.html">DAEMON</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -116,12 +121,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/attempted-murderassassination.html">ATTEMPTED MURDER/ASSASSINATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/racism.html">RACISM</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/homophobia.html">HOMOPHOBIA</a>
+      </div>
       <br/>
       <p>To become king of Almyra, Claude needs to go through a ritual to stretch the bond between his daemon and himself, to prove to his people that he can endure anything and watch over the entire country. While on this ordeal, he reflects upon his past and what led him here, and those he loves and left behind in Fodlan. However, those left behind don't necessarily wish to be left behind, and Lorenz is there to catch him as he completes the ritual.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

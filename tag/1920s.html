@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/1920s.html">1920S</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/lovecraft-without-the-racism.html">LOVECRAFT (WITHOUT THE RACISM)</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -106,6 +108,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/references-to-alcoholdrugs.html">REFERENCES TO ALCOHOL/DRUGS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-childhood-neglect.html">MENTIONS OF CHILDHOOD NEGLECT</a>
+      </div>
       <br/>
       <p>An ancient secretive group seeks to bring forth their leader in a new body while the remnants of their last attempt mass forces to interfere with their plans. (In which Rhea is up to even worse tricks than usual, El is a failed vessel, and the Black Eagles (and friends) attempt to interfere with a potentially world-ending ritual.)</p>
   </div>
@@ -114,6 +117,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/unified-fodlan.html">UNIFIED FODLAN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/1920s.html">1920S</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -130,12 +135,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethdimitri.html">BYLETH/DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mercedessylvain.html">MERCEDES/SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dorotheapetra.html">DOROTHEA/PETRA</a>
+      </div>
       <br/>
       <p>Set in the mid-1920s in a unified Fodlan, all of the characters are involved in the silent picture film industry. Dimitri and Felix are stars who are fronting a production of a history film based on their ancestors, Loog and Kyphon. When Dorothea is injured before joining as the love interest for Felix as Kyphon, Annette is tapped to take her place as a stand-in. When she more than delivers, everyone has to decide whether to risk the movie on the growing chemistry between a known leading man and a complete unknown.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/greek-mythology.html">GREEK MYTHOLOGY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/yuri.html">YURI</a>
@@ -92,12 +94,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/rhea.html">RHEA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-ashen-wolves.html">THE ASHEN WOLVES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethyuri.html">BYLETH/YURI</a>
+      </div>
       <br/>
       <p>A retelling of the Hades &amp; Persephone myth with a twist. Featuring Byleth as Persephone, Yuri as Hades and Rhea as Demeter. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

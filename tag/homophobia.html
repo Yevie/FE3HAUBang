@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/octopath-traveller.html">OCTOPATH TRAVELLER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-blue-lions.html">THE BLUE LIONS</a>
@@ -93,6 +95,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/transphobia.html">TRANSPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-character-death.html">PAST CHARACTER DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/canon-typical-violence.html">CANON TYPICAL VIOLENCE</a>
+      </div>
       <br/>
       <p>Eight travellers, all with their own aims, set off across Orsterra to fulfil their goals. Their backgrounds seem incompatible, ranging from a prince of a lost kingdom who took up the dancing garb to a knight who failed to protect her liege, but their stories come to intertwine.</p>
   </div>
@@ -101,6 +104,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ingrid.html">INGRID</a>
@@ -109,6 +114,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/homophobia.html">HOMOPHOBIA</a>
+      </div>
       <br/>
       <p>Ingrid returns to the hometown she thought she'd left for good. While there, she runs into some old friends and her ex, Annette.</p>
   </div>
@@ -117,6 +123,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/his-dark-materials-fusion.html">HIS DARK MATERIALS FUSION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/daemon.html">DAEMON</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -127,12 +135,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/attempted-murderassassination.html">ATTEMPTED MURDER/ASSASSINATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/racism.html">RACISM</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/homophobia.html">HOMOPHOBIA</a>
+      </div>
       <br/>
       <p>To become king of Almyra, Claude needs to go through a ritual to stretch the bond between his daemon and himself, to prove to his people that he can endure anything and watch over the entire country. While on this ordeal, he reflects upon his past and what led him here, and those he loves and left behind in Fodlan. However, those left behind don't necessarily wish to be left behind, and Lorenz is there to catch him as he completes the ritual.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

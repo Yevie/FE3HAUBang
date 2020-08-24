@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/castlevania.html">CASTLEVANIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/vampire.html">VAMPIRE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -99,12 +101,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/canon-typical-violence.html">CANON TYPICAL VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mind-control.html">MIND CONTROL</a>
+      </div>
       <br/>
       <p>Dimitri is the reincarnation of Dracula and is drawn to the castle to take up the mantle. Claude fails to save him, so he works for five years to become a monster hunter and learn more about Dracula so that he can summon the castle back into the world and try again to save Dimitri.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

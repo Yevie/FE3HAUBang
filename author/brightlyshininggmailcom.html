@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cyberpunk.html">CYBERPUNK</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/claude.html">CLAUDE</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/claudedimitri.html">CLAUDE/DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-bylethedelgard.html">MINOR BYLETH/EDELGARD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>Claude, soon-to-be CEO of the Leicester Conglomerate, is also the elite underground hacker Khalid. In his explorations of the dark web, he discovers what seems to be a cabal of mysterious figures threatening the delicate cease-fire between Leicester and the powerful Adrestia Corporation. Pursuing this lead brings him to Edelgard's doorstep and unearths another secret - the survival of Dimitri, supposedly killed when Blaiddyd Industries was destroyed.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

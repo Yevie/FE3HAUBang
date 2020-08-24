@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/fantasy.html">FANTASY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/edelgard.html">EDELGARD</a>
@@ -95,6 +97,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/implied-child-abuse.html">IMPLIED CHILD ABUSE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/human-cloning.html">HUMAN CLONING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/experimentation.html">EXPERIMENTATION</a>
+      </div>
       <br/>
       <p>Edelgard's step-brother, Dimitri, is chosen to pacify the Goddess through song and dance. Determined to save him from his fate at any cost, Edelgard sets off to slay the beast guarding the Goddess' Tower, a terrifying creature known only as the Ashen Demon.</p>
   </div>
@@ -103,6 +106,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/victorian.html">VICTORIAN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/historical.html">HISTORICAL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -116,12 +121,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethedelgard.html">BYLETH/EDELGARD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
+      </div>
       <br/>
       <p>Jane Austen style. Lady Marianne is unhappily engaged to Duke Ferdinand by her father's will, and she resigns herself to a life of solitude marrying a man she barely knows. Enter Duke Dimitri, a lonely soul who has also sworn off romance, believing himself to be undeserving despite the longing in his heart. Two love-starved dreamers fall into a forbidden romance both encouraged and manipulated, both secret and entangled in a scandalous web. Fully illustrated with a painting for every chapter.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

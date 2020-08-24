@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/flower-shop.html">FLOWER SHOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/tattoo-shop.html">TATTOO SHOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
@@ -96,12 +98,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/edelgard.html">EDELGARD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dorothea.html">DOROTHEA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bernadettapetra.html">BERNADETTA/PETRA</a>
+      </div>
       <br/>
       <p>Bernadetta’s passion for gardening pushes her to make an uncharacteristic decision, and when she is offered an opportunity to pursue her dreams, she takes it. When she moves into the flat above her future flower shop, she finds that she is not alone. Just next door, a girl named Petra offers a friendship and maybe something more too.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

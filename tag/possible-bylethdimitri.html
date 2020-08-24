@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/high-seas.html">HIGH SEAS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sylvain.html">SYLVAIN</a>
@@ -97,6 +99,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/grief.html">GRIEF</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-past-death.html">MENTIONS OF PAST DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/implied-self-harm.html">IMPLIED SELF HARM</a>
+      </div>
       <br/>
       <p>Sylvain is a pirate in search of an ancient relic. He finds a merman, Felix, in its place, injured and on the brink of death. His crew proceed to save Felix.</p>
   </div>
@@ -105,6 +108,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/zombie-apocalypse.html">ZOMBIE APOCALYPSE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -124,12 +129,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dead-bodies.html">DEAD BODIES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/guns.html">GUNS</a>
+      </div>
       <br/>
       <p>Dimitri, Felix, Sylvain, and Ingrid have done a pretty good job of surviving the zombie apocalypse so far. Well, until some clever corpses manage to infiltrate their little safe haven. Now they're on the run again, forging back into the outside world, unaware of the threats they'll face and the (familiar?) faces they'll encounter.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

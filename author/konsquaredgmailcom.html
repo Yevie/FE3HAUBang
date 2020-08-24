@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/figure-skating.html">FIGURE SKATING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -96,12 +98,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-disordered-eating.html">MENTIONS OF DISORDERED EATING</a>
+      </div>
       <br/>
       <p>Ice dancer Sylvain Gautier - one half of Canada's Sweethearts(tm) Arnault/Gautier - is finally returning to practice after months out injured. He's really not expecting to see former skating prodigy Felix Fraldarius, who has been absent from competition for the last three years, warming up at his coach's rink. Where has Felix been? Why is he back on the ice now? And how did he get so hot?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

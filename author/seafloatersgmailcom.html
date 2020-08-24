@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/neon-genesis-evangelion.html">NEON GENESIS EVANGELION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/pacific-rim.html">PACIFIC RIM</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ferdinandsylvain.html">FERDINAND/SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
+      </div>
       <br/>
       <p>Six months after failing to sync with his jaeger and being dismissed from the Officer Academy in Enbarr, Ferdinand is sent to the wall in Sreng. There, he meets Sylvain. Or: the unmaking and making of drift compatibility.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

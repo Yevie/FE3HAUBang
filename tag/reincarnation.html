@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/reincarnation.html">REINCARNATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/magic.html">MAGIC</a>
@@ -102,6 +104,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/war.html">WAR</a>
+      </div>
       <br/>
       <p>Linhardt is a memory witch — he extracts people's memories and freezes them in Crest necklaces to be revisited whenever by those who needs it. He has no memories of his life, however, no sense of time or space but the present. Byleth stumbles into his store one day, and Linhardt starts to remember.</p>
   </div>
@@ -110,6 +113,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/reincarnation.html">REINCARNATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -117,6 +122,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blue-lions.html">BLUE LIONS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethdimitri.html">BYLETH/DIMITRI</a>
+      </div>
       <br/>
       <p>Byleth moves to a sleepy town across the continent without knowing why. She starts to remember parts of her past life and reconnect with the reincarnations of the people she knew. However, the love of her life is nowhere to be find - not in her memories or among the people around her.</p>
   </div>
@@ -125,6 +131,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/reincarnation.html">REINCARNATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/university.html">UNIVERSITY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
@@ -144,12 +152,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ptsd.html">PTSD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/depression.html">DEPRESSION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>It's not everyday you wake up and find out that you and your boyfriend not only knew you each other in a past life, but that you hated him for causing your brother's death. Some things are better left in the past. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

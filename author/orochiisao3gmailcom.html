@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/radio-show.html">RADIO SHOW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -96,12 +98,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/edelgard.html">EDELGARD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/linhardtmarianne.html">LINHARDT/MARIANNE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethfelix.html">BYLETH/FELIX</a>
+      </div>
       <br/>
       <p>A rival radio show fic, starring Linhardt and Marianne as people who vaguely know each other and are intrigued by the other's existence- she follows his instagram, while he never misses one of her shows. They play music from local bands most frequently on their shows- including Strike Force (the black eagles), Blue Lions, and Claude and the Golden Deer!</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/1920s.html">1920S</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/lovecraft-without-the-racism.html">LOVECRAFT (WITHOUT THE RACISM)</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -106,6 +108,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/references-to-alcoholdrugs.html">REFERENCES TO ALCOHOL/DRUGS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-childhood-neglect.html">MENTIONS OF CHILDHOOD NEGLECT</a>
+      </div>
       <br/>
       <p>An ancient secretive group seeks to bring forth their leader in a new body while the remnants of their last attempt mass forces to interfere with their plans. (In which Rhea is up to even worse tricks than usual, El is a failed vessel, and the Black Eagles (and friends) attempt to interfere with a potentially world-ending ritual.)</p>
   </div>
@@ -114,6 +117,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/reincarnation.html">REINCARNATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/magic.html">MAGIC</a>
@@ -131,6 +136,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/war.html">WAR</a>
+      </div>
       <br/>
       <p>Linhardt is a memory witch — he extracts people's memories and freezes them in Crest necklaces to be revisited whenever by those who needs it. He has no memories of his life, however, no sense of time or space but the present. Byleth stumbles into his store one day, and Linhardt starts to remember.</p>
   </div>
@@ -139,6 +145,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/magic.html">MAGIC</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -150,12 +158,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-ships.html">POSSIBLE MINOR SHIPS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mafia.html">MAFIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>Five years ago, tensions between the three most influential crime houses in Fodlan came to a head and culminated in the largest turf war the city had ever seen. Now Byleth, a mercenary who’s sold their services to each of the houses at one time or another, emerges after years of silence as the head of the Church of Seiros, resurrecting an old, impotent house and flipping people who once belonged to the other houses. What are they after and can the other houses defeat them before Fodlan goes up in flames once more?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

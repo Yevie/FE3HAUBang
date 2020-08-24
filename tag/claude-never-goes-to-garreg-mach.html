@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/claude-never-goes-to-garreg-mach.html">CLAUDE NEVER GOES TO GARREG MACH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/time-loop.html">TIME LOOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -101,12 +103,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/trauma.html">TRAUMA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/psychological-horror.html">PSYCHOLOGICAL HORROR</a>
+      </div>
       <br/>
       <p>After being killed during Crimson Flower, Claude is met with a deity, who gives him the option to restart, which he takes, but he doesn't realize that every time he restarts, the world changes again, even if the dynamics between the three of them remain, and he must start from ground zero. Every time he dies, he is met with the deity and the option to start again; originally, he wants to create a world in the verdant wind-ending image, but eventually realizes that he just wants to be happy and to find love with Dimitri. This is the story of the final life, from the first time he's back in Foldan, but he is born crestless and must ascend the throne of Almyra and do what he can from the outside. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

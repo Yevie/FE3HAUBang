@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/2012.html">2012</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sylvain.html">SYLVAIN</a>
@@ -92,6 +94,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bernadettasylvain.html">BERNADETTA/SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-abuse.html">MENTIONS OF ABUSE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
+      </div>
       <br/>
       <p>Sylvain and Bernadetta meet on a Naruto RP forum in 2007, become close, and fall out of touch. Years later Sylvain finds her art tumblr, Bernadetta finds his emo thirst trap tumblr, and they both find freedom in one another.</p>
   </div>
@@ -100,6 +103,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/esports.html">ESPORTS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/university.html">UNIVERSITY</a>
@@ -112,6 +117,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/felixsylvain.html">FELIX/SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/depression.html">DEPRESSION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-abuse.html">MENTIONS OF ABUSE</a>
+      </div>
       <br/>
       <p>Ex "pro-gamer" Sylvain is bribed with fic to join Bernie's fledgling Askr Online team. They embark on a poggers journey of friendship, betrayal, rivalry and self-discovery.</p>
   </div>
@@ -120,6 +126,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/tattoo-shop.html">TATTOO SHOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -134,12 +142,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ignatzlorenz.html">IGNATZ/LORENZ</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bernadettaferdinand.html">BERNADETTA/FERDINAND</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-abuse.html">MENTIONS OF ABUSE</a>
+      </div>
       <br/>
       <p>Bernadetta, Ashe, and Ignatz have been working at their tattoo shop - and living together above it - for years now, in and out of each other's pockets and together pretty much all the time. But Dedue wants Ashe to move in with him, and Lorenz is about to make a big life change that's going to shake up Ignatz's life, and everything is going to change. And sure, the shop and her roommates have been the greatest source of stability in Bernadetta's life since she left home, and she's never been great with change, but she's handling everything FINE. Right?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

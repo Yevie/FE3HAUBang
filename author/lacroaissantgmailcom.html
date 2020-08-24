@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/byleth.html">BYLETH</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/felix.html">FELIX</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethdimitri.html">BYLETH/DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-ships.html">MINOR SHIPS</a>
+      </div>
       <br/>
       <p>Felix and Sylvain come out of a particularly hectic month of papers to the realization that Dimitri’s girlfriend Byleth has been living with them for a few weeks while her parents are off on another honeymoon. Byleth is the heir to  the Garreg Mach family of companies; she has horses, medieval weapon collections, and a battalion of servants to cater to her every whim. She does not need to be staying at their apartment.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

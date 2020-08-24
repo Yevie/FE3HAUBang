@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/caspar.html">CASPAR</a>
@@ -94,12 +96,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/raphael.html">RAPHAEL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/casparhilda.html">CASPAR/HILDA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-content.html">SEXUAL CONTENT</a>
+      </div>
       <br/>
       <p>Hilda is a popular influencer and meets pro-boxer/personal trainer Caspar at the gym. From getting to know him, she starts to have the confidence to start her own fashion business.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

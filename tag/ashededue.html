@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/tattoo-shop.html">TATTOO SHOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -99,6 +101,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ignatzlorenz.html">IGNATZ/LORENZ</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bernadettaferdinand.html">BERNADETTA/FERDINAND</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-abuse.html">MENTIONS OF ABUSE</a>
+      </div>
       <br/>
       <p>Bernadetta, Ashe, and Ignatz have been working at their tattoo shop - and living together above it - for years now, in and out of each other's pockets and together pretty much all the time. But Dedue wants Ashe to move in with him, and Lorenz is about to make a big life change that's going to shake up Ignatz's life, and everything is going to change. And sure, the shop and her roommates have been the greatest source of stability in Bernadetta's life since she left home, and she's never been great with change, but she's handling everything FINE. Right?</p>
   </div>
@@ -107,6 +110,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mafia.html">MAFIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/heist.html">HEIST</a>
@@ -125,12 +130,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/torture.html">TORTURE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/suggestive-language.html">SUGGESTIVE LANGUAGE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cursing.html">CURSING</a>
+      </div>
       <br/>
       <p>The Blue Lions are a prevalent mob in Fodlan. Their leader Dimitri and his right hand man Dedue are kidnapped by TWSitD, rumors say that they're still alive. The Blue Lions team up with Claude and his Golden Deer in order to save Dimitri and Dedue. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

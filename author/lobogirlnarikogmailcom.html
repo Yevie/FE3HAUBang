@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dragon-age.html">DRAGON AGE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ferdinand.html">FERDINAND</a>
@@ -92,12 +94,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ferdinandhubert.html">FERDINAND/HUBERT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-past-abuse.html">DISCUSSIONS OF PAST ABUSE</a>
+      </div>
       <br/>
       <p>Continuing a fic already in progress (act 1 out of 3 currently already written/being posted, AU bang would focus on act 2 and MAYBE act 3). Ferdinand is a Templar and Hubert is a blood mage. After Act 1 events forced them to flee the Circle for their lives, they rediscover each other on the road and travel together, all while Ferdinand deals with lyrium withdrawal and coming to terms with the fact that blood magic isn't as awful as it seems. Also, lots of mutual pining. (And eventual joining of the Inquisition and helping to fight for mage rights and save the world and fall in love.)</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

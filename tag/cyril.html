@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/new-york.html">NEW YORK</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -98,6 +100,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/xenophobia.html">XENOPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/queerphobia.html">QUEERPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-character-death.html">MINOR CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>There’s no place Claude von Riegan would rather be during election year than in the city of New York. This immigration lawyer has had enough with establishment politics, and in an act of spontaneity, he decides to run for office as a progressive Democrat. Claude recruits the help of critically-acclaimed campaign manager Dimitri Alexandre Blaiddyd to go up against some of the most powerful Democrats in Congress: the Gloucester family. Individuals from seemingly opposite worlds are brought together in what will be the most contentious election in New York’s history.</p>
   </div>
@@ -106,6 +109,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/les-miserables.html">LES MISERABLES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/ashe.html">ASHE</a>
@@ -122,6 +127,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-hildaleonie.html">MINOR HILDA/LEONIE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/character-death.html">CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>After being released from prison for stealing a loaf of bread, Ashe Duran finds life as an ex-convict difficult; however, following the generous act of Flayn, a holy woman, he sets out to become an honorable man and breaks parole. Five years later and under a different name, he has made a living as a restaurateur alongside his trusted friend, Cyril, all while political tensions rise and his former parole officer Caspar rediscovers his trail. A Les Miserables inspired AU.</p>
   </div>
@@ -130,6 +136,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/alternate-crimson-flower.html">ALTERNATE CRIMSON FLOWER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cyril.html">CYRIL</a>
@@ -142,12 +150,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/fight-scenes.html">FIGHT SCENES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-abuse.html">PAST ABUSE</a>
+      </div>
       <br/>
       <p>Cyril realises he is exploited by Rhea and sides with Edelgard to take her down. He recounts his past and the trauma he has endured, and along the way recruits Lysithea to Edelgard's cause. Climaxes with Cyril being the one to bring Rhea down in the end.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

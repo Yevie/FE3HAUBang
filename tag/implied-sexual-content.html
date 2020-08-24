@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/space-opera.html">SPACE OPERA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/byleth.html">BYLETH</a>
@@ -100,6 +102,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/implied-sexual-content.html">IMPLIED SEXUAL CONTENT</a>
+      </div>
       <br/>
       <p>Young explorers set out on an expedition to uncover ancient ruins of an alien society thought to be mere legend back on Earth. Little do they know, they may be closer to a living legend than they think. What this means for mankind, and it’s future has yet to be uncovered, but when has that ever stopped Claude von Riegan?</p>
   </div>
@@ -108,6 +111,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/raphael.html">RAPHAEL</a>
@@ -125,12 +130,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/implied-sexual-content.html">IMPLIED SEXUAL CONTENT</a>
+      </div>
       <br/>
       <p>Bernadetta's simply trying to get her next novel out on time when a break-in at her condo leaves her shaken up. As a bestselling YA author with as many enemies as fans, Bernadetta can't rely on just anyone to keep her safe. For Raphael, the best bodyguard in the business, protecting Bernadetta from the consequences of her own fame may be more than he bargained for. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

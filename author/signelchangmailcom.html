@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/coffeeshop.html">COFFEESHOP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/university.html">UNIVERSITY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-golden-deer.html">THE GOLDEN DEER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethclaude.html">BYLETH/CLAUDE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-casparhilda.html">MINOR CASPAR/HILDA</a>
+      </div>
       <br/>
       <p>The members of the Golden Deer group, in order to pass a year-long business class, are expected to run a coffee shop and keep it afloat, catering to the students in the college town of Garreg Mach. Instead of following that one (simple) task, they instead find romances, friendships, and the occasional temptation to ditch the class entirely.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

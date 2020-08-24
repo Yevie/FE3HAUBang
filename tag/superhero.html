@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/superhero.html">SUPERHERO</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -94,6 +96,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gen.html">GEN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
+      </div>
       <br/>
       <p>Dimitri, once a pinnacle of justice, struggles to accept the betrayal of Edelgard five years later. A new league has formed between the Blue Lions and Golden Deer Superhero Task Forces. Will Dimitri succumb to the ghosts of his past, or will he be able to move on thanks to the guidance of a mentor he long believed was dead?</p>
   </div>
@@ -102,6 +105,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/superhero.html">SUPERHERO</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/big-hero-6.html">BIG HERO 6</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -115,12 +120,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/vioelnce.html">VIOELNCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/major-character-death.html">MAJOR CHARACTER DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/temporary-character-death.html">TEMPORARY CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>While visiting their father in the city of Garreg Mach, a series of strange events leads Byleth to befriend a mysterious girl named Sothis and a group of super-powered students calling themselves the Ashen Wolves. When tragedy strikes Byleth’s family, the six friends set out for revenge — along the way, they’ll uncover the truth behind the many mysteries that lurk in their city.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

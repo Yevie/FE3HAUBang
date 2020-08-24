@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/new-york.html">NEW YORK</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -98,12 +100,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/xenophobia.html">XENOPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/queerphobia.html">QUEERPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-character-death.html">MINOR CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>There’s no place Claude von Riegan would rather be during election year than in the city of New York. This immigration lawyer has had enough with establishment politics, and in an act of spontaneity, he decides to run for office as a progressive Democrat. Claude recruits the help of critically-acclaimed campaign manager Dimitri Alexandre Blaiddyd to go up against some of the most powerful Democrats in Congress: the Gloucester family. Individuals from seemingly opposite worlds are brought together in what will be the most contentious election in New York’s history.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

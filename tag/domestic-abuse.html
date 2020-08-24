@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cinderella.html">CINDERELLA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -99,12 +101,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/domestic-abuse.html">DOMESTIC ABUSE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/depictions-of-abuse.html">DEPICTIONS OF ABUSE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/death-of-a-parent.html">DEATH OF A PARENT</a>
+      </div>
       <br/>
       <p>Everything changed when Dimitri’s father married his stepmother, Patricia, then died, leaving them behind to grieve and pick up the pieces of their fledgling estate. While reduced to a common servant instead of a cherished son and brother, Dimitri does his best to have courage and be kind despite his stepfamily’s abuse. Yet magic still remains in the world — and when he meets the kingdom’s princess in the woods, Dimitri’s life will change forever.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

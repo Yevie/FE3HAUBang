@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/university.html">UNIVERSITY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -95,12 +97,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-ignatzraphael.html">MINOR IGNATZ/RAPHAEL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/minor-ships.html">MINOR SHIPS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussion-of-financial-stress.html">DISCUSSION OF FINANCIAL STRESS</a>
+      </div>
       <br/>
       <p>Leonie meets Sylvain and Felix when they come through the drive-thru at her work. They get to know each other, and Leonie learns that a) Sylvain isn't actually a dumbass, b) Felix isn't cool, not even a little bit, and c) it's okay to relax sometimes and not burn yourself out!</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

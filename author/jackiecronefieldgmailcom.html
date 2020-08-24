@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/arranged-marriage.html">ARRANGED MARRIAGE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/edelgard.html">EDELGARD</a>
@@ -95,12 +97,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/depression.html">DEPRESSION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-suicidesuicidal-ideation.html">MENTIONS OF SUICIDE/SUICIDAL IDEATION</a>
+      </div>
       <br/>
       <p>Dimitri and Edelgard have been engaged since birth, and are set to marry soon after their eighteenth birthdays; but Edelgard has other plans. Dimitri's hopes for the future are shattered when his beloved fiance, Edelgard, betrays him and declares war on the Church of Seiros. As the years go by, Dimitri fights back against Edelgard and the Imperial Army, seeking answers from his former fiance, drowning in more and more madness and heartbreak along the way. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

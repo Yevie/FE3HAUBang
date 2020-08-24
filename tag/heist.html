@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/heist.html">HEIST</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/leverage.html">LEVERAGE</a>
@@ -96,6 +98,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-golden-deer.html">THE GOLDEN DEER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethclaude.html">BYLETH/CLAUDE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>After her father is murdered while investigating Arundel and his affairs, Byleth Eisner, an insurance investigator, is recruited by Claude von Riegan, a grifter, to lead a team of thieves. Through a series of cons, the Golden Deer work together to bring down Arundel's crooked empire. </p>
   </div>
@@ -104,6 +107,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mafia.html">MAFIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/heist.html">HEIST</a>
@@ -122,12 +127,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/torture.html">TORTURE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/suggestive-language.html">SUGGESTIVE LANGUAGE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/cursing.html">CURSING</a>
+      </div>
       <br/>
       <p>The Blue Lions are a prevalent mob in Fodlan. Their leader Dimitri and his right hand man Dedue are kidnapped by TWSitD, rumors say that they're still alive. The Blue Lions team up with Claude and his Golden Deer in order to save Dimitri and Dedue. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

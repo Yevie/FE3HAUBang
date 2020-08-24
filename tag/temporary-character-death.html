@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/percy-jackson-and-the-olympians.html">PERCY JACKSON AND THE OLYMPIANS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -101,6 +103,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/angst.html">ANGST</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
+      </div>
       <br/>
       <p>When the gods go missing, it's up to Dimitri, Edelgard, and Claude to find them. They'll have to fight monsters, wrestle with their own demons, and uncover the secrets the gods have held for millennia if they hope for success. Only, the prophecy promises that one of them will die in the process... </p>
   </div>
@@ -109,6 +112,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/magical-girls.html">MAGICAL GIRLS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/madoka-magica.html">MADOKA MAGICA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -120,6 +125,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/annettelysithea.html">ANNETTE/LYSITHEA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/temporary-character-death.html">TEMPORARY CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>In the world of magical girls, Lysithea watches all of her friends die. To save them, she wishes to go back in time to when they first met - but still fails to save them. She tries over and over again, going back in time, and she won’t stop trying until she succeeds.</p>
   </div>
@@ -128,6 +134,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/superhero.html">SUPERHERO</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/big-hero-6.html">BIG HERO 6</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -141,12 +149,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/vioelnce.html">VIOELNCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/major-character-death.html">MAJOR CHARACTER DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/temporary-character-death.html">TEMPORARY CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>While visiting their father in the city of Garreg Mach, a series of strange events leads Byleth to befriend a mysterious girl named Sothis and a group of super-powered students calling themselves the Ashen Wolves. When tragedy strikes Byleth’s family, the six friends set out for revenge — along the way, they’ll uncover the truth behind the many mysteries that lurk in their city.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

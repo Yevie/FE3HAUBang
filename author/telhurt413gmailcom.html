@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/single-dad.html">SINGLE DAD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/hilda.html">HILDA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mercedes.html">MERCEDES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/claudedimitri.html">CLAUDE/DIMITRI</a>
+      </div>
       <br/>
       <p>Claude is a single father trying his absolute best to be a good and loving dad to his (mildly) spoiled daughter. Unfortunately, he is called into school one day to address a possible issue of his child (ALLEGEDLY) bullying her classmate. Fortunately, the father of said bully victim is Dimitri, an incredibly handsome (and maybe single?) man who is excited to try and work together to mend their children’s relationship.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

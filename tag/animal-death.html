@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dystopian.html">DYSTOPIAN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/post-apocalyptic.html">POST-APOCALYPTIC</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -94,12 +96,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-minor-claudedimitri.html">POSSIBLE MINOR CLAUDE/DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blood.html">BLOOD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/animal-death.html">ANIMAL DEATH</a>
+      </div>
       <br/>
       <p>Three wanderers meet each other, and together decide to go to a new world where they could finally live in peace. As they get to know each other (and their past) they realise they're not so different after all.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

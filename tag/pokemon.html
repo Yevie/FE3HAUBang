@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/pokemon.html">POKEMON</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -92,12 +94,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/claude.html">CLAUDE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gen.html">GEN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
+      </div>
       <br/>
       <p>Dimitri, Claude, and Edelgard are brand new Pokemon trainers, who go to see Professor Byleth for their first Pokemon. Dimitri chooses Squirtle, Claude chooses Bulbasaur, and Edelgard chooses Charmander. They go their seperate ways, following each of them on differents steps to become the Pokemon League Champion. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

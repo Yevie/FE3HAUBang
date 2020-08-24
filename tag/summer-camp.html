@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/summer-camp.html">SUMMER CAMP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/manuela.html">MANUELA</a>
@@ -96,6 +98,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-transphobia.html">PAST TRANSPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dysphoria.html">DYSPHORIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/adulthoodtm.html">#ADULTHOOD™</a>
+      </div>
       <br/>
       <p>Dr. Manuela Cassagranda, M.D. was a peerless surgeon at the start of a brilliant career with nowhere to go but up, her bright future star-studded and full of possibility for television deals, celebrity stardom, money, accolades, and suitors lined up around the block. She was going to rake in the big bucks, marry some twenty-years-younger thembo, retire at fifty, and spend the rest of her life sunbathing on her deck while drunk on the finest mixed drinks money could buy.</p>
 <p>Now she’s a live-in triage nurse at a kids summer camp, married to her college ex for tax benefits, old enough that she’s embarrassed to print her age on forms, and all she ever drinks is bottom-shelf boxed wine. And if all that weren’t enough, the twentysomething camp counsellors have decided she’s a “trans elder” and think she ought to tell her ex that she might still be in love with him. </p>
@@ -106,6 +109,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/summer-camp.html">SUMMER CAMP</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -113,12 +118,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sylvain.html">SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/felixsylvain.html">FELIX/SYLVAIN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-violence.html">POSSIBLE VIOLENCE</a>
+      </div>
       <br/>
       <p>Felix never imagined he'd have to endure a university summer camp with a cabin roomie he utterly loathes. Sylvain is all about finding fun and friendship at the mountain getaway but he just can't get through to his sour-faced camp partner. Can they untangle the strange tension between them before it ruins camp for everyone?</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

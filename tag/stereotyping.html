@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/freaks-and-geeks-tv-show.html">FREAKS AND GEEKS (TV SHOW)</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/1980s.html">1980S</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/high-school.html">HIGH SCHOOL</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gen.html">GEN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/stereotyping.html">STEREOTYPING</a>
+      </div>
       <br/>
       <p>A Freaks and Geeks inspired AU for the Golden Deer house, featuring all 8 students in a high school setting.  Each chapter will feature a few students in their daily lives, focusing on their friendships, personal experiences, and interactions with each other. Featuring the 'geeks'- Ignatz, Raphael, Marianne, and Lorenz, and the 'freaks'- Claude, Lysithea, Hilda, and Leonie, who all overcome their misconceptions of each other and realize that they have one thing in common- friendship!</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/magical-girls.html">MAGICAL GIRLS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/madoka-magica.html">MADOKA MAGICA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -96,12 +98,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/annettelysithea.html">ANNETTE/LYSITHEA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/temporary-character-death.html">TEMPORARY CHARACTER DEATH</a>
+      </div>
       <br/>
       <p>In the world of magical girls, Lysithea watches all of her friends die. To save them, she wishes to go back in time to when they first met - but still fails to save them. She tries over and over again, going back in time, and she won’t stop trying until she succeeds.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

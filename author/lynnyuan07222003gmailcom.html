@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/high-school.html">HIGH SCHOOL</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -94,12 +96,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitrifelix.html">DIMITRI/FELIX</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/possible-violence.html">POSSIBLE VIOLENCE</a>
+      </div>
       <br/>
       <p>Student Council Vice President Felix Fraldarius is known to be pretentious, snippy, and generally unfriendly. What they don’t know, is that Felix Fraldarius also happens to have the biggest crush on Varsity hockey player Dimitri. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

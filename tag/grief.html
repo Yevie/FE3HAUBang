@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/high-seas.html">HIGH SEAS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sylvain.html">SYLVAIN</a>
@@ -97,6 +99,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/grief.html">GRIEF</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-past-death.html">MENTIONS OF PAST DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/implied-self-harm.html">IMPLIED SELF HARM</a>
+      </div>
       <br/>
       <p>Sylvain is a pirate in search of an ancient relic. He finds a merman, Felix, in its place, injured and on the brink of death. His crew proceed to save Felix.</p>
   </div>
@@ -105,6 +108,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/shoujo-manga.html">SHOUJO MANGA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/felix.html">FELIX</a>
@@ -113,6 +118,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/grief.html">GRIEF</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bullying.html">BULLYING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
+      </div>
       <br/>
       <p>Felix is a high school student with a secret: he works part-time at a maid cafe. Since starting his job, he has had no problems keeping his schoolmates from finding out, but when transfer student Claude von Riegan shows up at the cafe one afternoon, Felix's secret is threatened. At first, Claude only seems interested in teasing Felix, but as they get to know each other, real feelings begin to develop. </p>
   </div>
@@ -121,6 +127,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/werewolves.html">WEREWOLVES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
@@ -134,12 +142,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/grief.html">GRIEF</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/anxiety.html">ANXIETY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-abuse.html">PAST ABUSE</a>
+      </div>
       <br/>
       <p>Edelgard is a werewolf hunter in order to avenge her stepbrother; Bernadetta is a newly-turned werewolf. They meet when Edelgard stumbles across an injured girl (Bernadetta) in the woods and decides to take her in and let her stay with her for a while. They start to fall in love, but Bernadetta has to try to keep her true identity a secret.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/octopath-traveller.html">OCTOPATH TRAVELLER</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/the-blue-lions.html">THE BLUE LIONS</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/transphobia.html">TRANSPHOBIA</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/past-character-death.html">PAST CHARACTER DEATH</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/canon-typical-violence.html">CANON TYPICAL VIOLENCE</a>
+      </div>
       <br/>
       <p>Eight travellers, all with their own aims, set off across Orsterra to fulfil their goals. Their backgrounds seem incompatible, ranging from a prince of a lost kingdom who took up the dancing garb to a knight who failed to protect her liege, but their stories come to intertwine.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

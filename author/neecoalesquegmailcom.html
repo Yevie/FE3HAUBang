@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/reincarnation.html">REINCARNATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
@@ -92,12 +94,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/blue-lions.html">BLUE LIONS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethdimitri.html">BYLETH/DIMITRI</a>
+      </div>
       <br/>
       <p>Byleth moves to a sleepy town across the continent without knowing why. She starts to remember parts of her past life and reconnect with the reincarnations of the people she knew. However, the love of her life is nowhere to be find - not in her memories or among the people around her.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

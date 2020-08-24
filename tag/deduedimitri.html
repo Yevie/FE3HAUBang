@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/fullmetal-alchemist.html">FULLMETAL ALCHEMIST</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/felix.html">FELIX</a>
@@ -94,6 +96,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/deduedimitri.html">DEDUE/DIMITRI</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/violence.html">VIOLENCE</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/gore.html">GORE</a>
+      </div>
       <br/>
       <p>Glenn and Felix commit one of the major taboos in alchemy by transmuting a human being. Years later, and they want their bodies back.</p>
   </div>
@@ -102,6 +105,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/percy-jackson-and-the-olympians.html">PERCY JACKSON AND THE OLYMPIANS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sfw.html">SFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/dimitri.html">DIMITRI</a>
@@ -118,6 +123,7 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/family-issues.html">FAMILY ISSUES</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/angst.html">ANGST</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
+      </div>
       <br/>
       <p>When the gods go missing, it's up to Dimitri, Edelgard, and Claude to find them. They'll have to fight monsters, wrestle with their own demons, and uncover the secrets the gods have held for millennia if they hope for success. Only, the prophecy promises that one of them will die in the process... </p>
   </div>
@@ -126,6 +132,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/university.html">UNIVERSITY</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/beach-house.html">BEACH HOUSE</a>
@@ -141,12 +149,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-suicidesuicidal-ideation.html">MENTIONS OF SUICIDE/SUICIDAL IDEATION</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-self-harm.html">MENTIONS OF SELF HARM</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/mentions-of-harassmentbullying.html">MENTIONS OF HARASSMENT/BULLYING</a>
+      </div>
       <br/>
       <p>Claude and Dimitri are at an impasse in their complicated relationship.  They have one vacation down the shore to figure out if they are going to pursue a formal relationship.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

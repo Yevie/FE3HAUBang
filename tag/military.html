@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/modern.html">MODERN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/no-magic.html">NO MAGIC</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/military.html">MILITARY</a>
@@ -100,12 +102,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/discussions-of-mental-illness.html">DISCUSSIONS OF MENTAL ILLNESS</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/swearing.html">SWEARING</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/sexual-implications.html">SEXUAL IMPLICATIONS</a>
+      </div>
       <br/>
       <p>Dimitri, Captain of the Areadbhar, meets Byleth, a whiskey maid during one of their layovers. The two fall in love and learn to navigate those feelings while Dimitri is at sea. </p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>

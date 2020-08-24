@@ -85,6 +85,8 @@
   <header>
   </header>
   <div>
+      <button type="button" class="collapsible">Tags</button>
+      <div class="content">
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/victorian.html">VICTORIAN</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/nsfw.html">NSFW</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/byleth.html">BYLETH</a>
@@ -93,12 +95,29 @@
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/edelgard.html">EDELGARD</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/linhardt.html">LINHARDT</a>
       <a class="tag" href="https://yevie.github.io/FE3HAUBang/tag/bylethfelix.html">BYLETH/FELIX</a>
+      </div>
       <br/>
       <p>What if Rhea's experiments took centuries longer to create a vessel for Sothis? In a Victorian-era Fodlan, where crests have died out and magic is only a legend, Byleth Eisner is hired to teach swordsmanship to the students of the Officers' Academy. Garreg Mach is full of secrets, though, not least of which is a gruesome sword that looks like it's made of bones, and which lights up in her hands.</p>
   </div>
 </article>
 </div>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 
 
     <footer>
