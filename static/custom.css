@@ -11,9 +11,9 @@ main .grid-container {
   -webkit-column-gap: 0em;
   -moz-column-gap: 0em;
   column-gap: 0em;
-  column-width: 300px;
-  font-size: 80%;
-  line-height: 1.3em;
+  column-width: 400px;
+  font-size: 0.85em;
+  line-height: 1.5em;
 
 }
 
@@ -80,7 +80,7 @@ a.tag:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
 }
 
 h1{color: #351C76;}
